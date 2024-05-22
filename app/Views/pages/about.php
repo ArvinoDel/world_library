@@ -22,8 +22,8 @@
 
     <section class="about-home" id="home">
         <div class="about-home-content">
-            <h1>Hi, It's <span>Andika</span></h1>
-            <h3 class="about-text-animation">I'm a <span></span></h3>
+            <h1>Hi, It's <span class="about-logo-span">Andika</span></h1>
+            <h3 class="about-text-animation">I'm a <span class="about-logo-span"></span></h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quia aspernatur ut voluptatum ratione expedita mollitia doloribus, rerum dolorem eligendi et consectetur nostrum magni asperiores, tempora eveniet repellat corrupti. Saepe!</p>
             <div class="about-social-icons">
                 <a href="#"><i class='bx bxl-linkedin'></i></a>
@@ -43,8 +43,8 @@
 
     <section class="about-home" id="home">
         <div class="about-home-content">
-            <h1>Hi, It's <span>Faiz</span></h1>
-            <h3 class="about-text-animation2">I'm a <span></span></h3>
+            <h1>Hi, It's <span class="about-logo-span">Faiz</span></h1>
+            <h3 class="about-text-animation2">I'm a <span class="about-logo-span"></span></h3>
             <p class="about-home">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quia aspernatur ut voluptatum ratione expedita mollitia doloribus, rerum dolorem eligendi et consectetur nostrum magni asperiores, tempora eveniet repellat corrupti. Saepe!</p>
             <div class="about-social-icons">
                 <a href="#"><i class='bx bxl-linkedin'></i></a>

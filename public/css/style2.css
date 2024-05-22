@@ -3,7 +3,7 @@
     --bg-color: #ffffff;
     --second-bg-color: #fff7f7;
     --text-color: rgb(0, 0, 0);
-    --main-color: #00ffee;
+    --main-color: #ffe100;
 }
 
 section{
@@ -24,10 +24,6 @@ section{
     text-align: left;
     justify-content: center;
     margin-top: 1rem;
-}
-
-span{
-    color: var(--main-color);
 }
 
 .about-logo-span{
