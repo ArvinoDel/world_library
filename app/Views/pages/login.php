@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="<?= base_url('css/style3.css') ?>">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
 </head>
 
