@@ -264,3 +264,49 @@ section{
     }
 }
 
+.book__swiper{
+    margin: initial;
+    margin-top: 5%;
+}
+
+.book__container{
+    padding-top: 2rem;
+    row-gap: 2.5rem;
+}
+
+.book__data{
+    text-align: center;
+}
+
+.book__title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.book__description{
+    margin-bottom: 2rem;
+}
+
+.book__images{
+    display: grid;
+    display: inline;
+    justify-items: center;
+}
+
+.book__article, .book__img{
+    width: 260px;
+    transition: scale .4s;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 10%;
+}
+
+.book__article{
+    scale: .8;
+    max-width: fit-content;
+}
+
+.swiper-slide-active,
+.swiper-slide-duplicate-active{
+    scale: 1;
+}
