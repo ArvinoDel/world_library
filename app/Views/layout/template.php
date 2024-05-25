@@ -28,6 +28,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css">
     <link href="<?= base_url('lib/animate/animate.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('lib/owlcarousel/assets/owl.carousel.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('lib/lightbox/css/lightbox.min.css') ?>" rel="stylesheet">
@@ -64,6 +65,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?= base_url('lib/wow/wow.min.js') ?>"></script>
     <script src="<?= base_url('lib/easing/easing.min.js') ?>"></script>
@@ -75,6 +77,7 @@
 
     <!-- Template Javascript -->
     <script src="<?= base_url('js/main.js') ?>"></script>
+    <script src="<?= base_url('js/main2.js') ?>"></script>\
 </body>
 
 </html>

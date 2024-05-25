@@ -8,11 +8,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="/pages/" class="nav-item nav-link <?php if($title == "home"){ echo 'active';} ?>">Home</a>
-                <a href="/pages/about" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="/pages/contact" class="nav-item nav-link <?php if($title == "home"){ echo 'active';} ?>">Contact</a>
-                <a href="product.html" class="nav-item nav-link">Products</a>
+                <a href="/pages/" class="nav-item nav-link <?php if($title_link == "home"){ echo 'active';} ?>">Home</a>
+                <a href="/pages/about" class="nav-item nav-link  <?php if($title_link == "about"){ echo 'active';} ?>">About</a>
+                <a href="/pages/contact" class="nav-item nav-link <?php if($title_link == "contact"){ echo 'active';} ?>">Contact</a>
+                <a href="/pages/product" class="nav-item nav-link  <?php if($title_link == "product"){ echo 'active';} ?>">Products</a>
                 <div class="btn-group dropstart p-4">
                     <img src="<?=base_url('img/user.png') ?>" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="width: 33px; height: 33px; border-radius: 50%;">
                     <div class="dropdown-menu p-2" style="width: 400px;">

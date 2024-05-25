@@ -37,6 +37,15 @@ class Pages extends BaseController
         return view('pages/about', $data);
     }
 
+    public function product(){
+        $data = [
+            'title' => "Product | WorldLibrary",
+            'scrumb' => "Product",
+            'title_link' => 'product',
+            'bg' => '../img/bg-library4.jpg',
+        ];
+        return view('pages/product', $data);
+    }
 
     // public function contact()
     // {
