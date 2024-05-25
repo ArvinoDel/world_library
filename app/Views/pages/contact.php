@@ -17,7 +17,7 @@
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="section-title bg-white text-center text-primary px-3">Contact Us</p>
-                <h1 class="mb-5">If You Have Any Query, Please Contact Us</h1>
+                <h1 class="mb-5">Do You Have Any Query? Please Contact Us</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
