@@ -7,12 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="<?= base_url('css/style3.css') ?>">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="form-container register-container">
-            <form action="" method="POST">
+            <form action="<?= base_url('/register') ?>" method="POST">
                 <h1>Register Here</h1>
                 <input type="text" placeholder="Name" name="username" required>
                 <input type="email" placeholder="Email" name="email" required>
@@ -27,9 +28,9 @@
             </form>
         </div>
         <div class="form-container login-container">
-            <form action="" method="POST">
+            <form action='<?= base_url('/login') ?>' method="POST">
                 <h1>Login Here</h1>
-                <input type="text" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Username" name="username" required>
                 <input type="password" placeholder="Password" name="password" required>
                 <div class="content">
                     <div class="checkbox">
@@ -82,6 +83,112 @@
         });
 
     </script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const successMessage = '<?= session()->getFlashdata('success'); ?>';
+            const errorMessage = '<?= session()->getFlashdata('error'); ?>';
+            let validationErrors = '<?= session()->getFlashdata('errors'); ?>';
+
+            if (successMessage) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success!',
+                    text: successMessage
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: errorMessage
+                });
+            }
+
+            if (validationErrors) {
+                let errors = '';
+                try {
+                    errors = JSON.parse(validationErrors);
+                    let errorMessages = '';
+                    for (const field in errors) {
+                        errorMessages += `${field}: ${errors[field]}\n`;
+                    }
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Validation Errors',
+                        html: errorMessages
+                    });
+                } catch (e) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: validationErrors
+                    });
+                }
+            }
+
+            <?php
+                session()->remove('success');
+                session()->remove('error');
+                session()->remove('errors'); 
+            ?>
+
+            const loginForm = document.getElementById('loginForm');
+
+            loginForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const formData = new FormData(loginForm);
+                fetch(loginForm.action, {
+                    method: loginForm.method,
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok.');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.errors) {
+                        let errorMessages = '';
+                        for (const field in data.errors) {
+                            errorMessages += `${field}: ${data.errors[field]}\n`;
+                        }
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Validation Errors',
+                            html: errorMessages
+                        });
+                    } else if (data.error) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error!',
+                            text: data.error
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success',
+                            text: data.message
+                        }).then(() => {
+                            window.location.href = '/pages';
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Fetch Error:', error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Terjadi kesalahan saat memproses permintaan.'
+                    });
+                });
+            });
+        }); 
+    </script>
+
+
 </body>
 
 </html>
