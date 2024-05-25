@@ -152,7 +152,7 @@
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <a class="d-block h5" href="">The Girl in The Woods</a>
+                        <a class="d-block h5" href="">The Girl In The Woods</a>
                         <span class="text-primary me-1">Free</span>
                         <span class="text-decoration-line-through">$29.00</span>
                     </div>
