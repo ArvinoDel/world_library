@@ -47,6 +47,15 @@ class Pages extends BaseController
         return view('pages/product', $data);
     }
 
+    public function profile(){
+        $data = [
+            'title' => "Profile | WorldLibrary",
+            'scrumb' => "Profile",
+            'title_link' => 'profile',
+        ];
+        return view('pages/profile', $data);
+    }
+
     // public function contact()
     // {
     //     $data = [
