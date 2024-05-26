@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login | WorldLibrary</title>
+    <link rel="shortcut icon" href="<?= base_url('img/logo-perpus.png') ?>" type="image/x-icon">
     <link rel="stylesheet" href="<?= base_url('css/style3.css') ?>">
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
