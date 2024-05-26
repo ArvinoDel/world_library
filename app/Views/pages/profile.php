@@ -10,9 +10,7 @@
 </head>
 
 <body>
-    <form action="" method="POST">
-
-
+    <form action="/update" method="post">
         <div class="container light-style flex-grow-1 container-p-y">
             <?php if (session()->has('success')) : ?>
                 <div class="alert alert-success">
@@ -38,7 +36,6 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <form action="/update" method="post">
                             <div class="tab-content">
                                 <div class="tab-pane fade active show" id="account-general">
                                     <div class="card-body media align-items-center">
@@ -317,8 +314,8 @@
                 </div>
             </div>
             <div class="text-right mt-3">
-                <button type="submit" class="btn btn-primary">Save changes</button>&nbsp;
-                <button type="button" class="btn btn-default" onclick="history.back();">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-default" onclick="history.back();">Cancel</button>
             </div>
     </form>
     </div>
