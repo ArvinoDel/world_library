@@ -47,10 +47,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="#">WorldLibrary</a>, All Right Reserved.
+                    &copy; <a class="fw-semi-bold" href="#">© 2024 WorldLibrary</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    Designed By <a class="fw-semi-bold" href="#">Andika</a>
+                    Designed By <a class="fw-semi-bold" href="#">Our Teams</a>
                 </div>
             </div>
         </div>
