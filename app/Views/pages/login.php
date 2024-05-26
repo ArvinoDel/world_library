@@ -156,7 +156,7 @@
                                 html: errorMessages
                          });
    
-                       } else i f (data.error) {
+                       } else if (data.error) {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Error!',
