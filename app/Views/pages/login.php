@@ -17,7 +17,7 @@
             <form action="<?= base_url('/register') ?>" method="POST">
                 <h1>Register Here</h1>
                 <input type="text" placeholder="Name" name="username" required>
-                <input type="tel" name="phone" placeholder="Phone Number" pattern="\+62\d{2}-\d{4}-\d{4}" required>
+                <input type="tel" name="phone" placeholder="Phone Number" value="+62" pattern="+62\d{3}-\d{4}-\d{4}" required>
                 <input type="email" placeholder="Email" name="email" required>
                 <input type="password" placeholder="Password" name="password" required>
                 <input type="file" name="file" required>
@@ -55,7 +55,7 @@
                 <div class="overlay-panel overlay-right">
                     <h1 class="title">Let's Read <br> Some Books!</h1>
                     <p>If You Don't Have An Account, Let's Create It!</p>
-                    <button class="ghost" id="register">Register 
+                    <button class="ghost" id="register">Register
                         <i class="lni lni-arrow-right register"></i>
                     </button>
                 </div>
@@ -77,7 +77,7 @@
 
     </script>
 
-<script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const successMessage = '<?= session()->getFlashdata('success'); ?>';
             const errorMessage = '<?= session()->getFlashdata('error'); ?>';
@@ -122,57 +122,61 @@
             }
 
             <?php
-                session()->remove('success');
-                session()->remove('error');
-                session()->remove('errors'); 
+            session()->remove('success');
+            session()->remove('error');
+            session()->remove('errors');
             ?>
+
+
 
             const loginForm = document.getElementById('loginForm');
 
             loginForm.addEventListener('submit', (event) => {
                 event.preventDefault();
                 const formData = new FormData(loginForm);
-                fetch(loginForm.action, {
-                    method: loginForm.method,
-                    body: formData
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok.');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.errors) {
-                        let errorMessages = '';
-                        for (const field in data.errors) {
-                            errorMessages += `${field}: ${data.errors[field]}\n`;
+                    fetch(loginForm.action, {
+                        method: loginForm.method,
+                        body: formData
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok.');
                         }
+                      return response.json();
+                    })
+                .then(data = > {
+                      if (  data.errors) {
+                            let errorMessages = '';
+                        for (const field in data.errors) {
+                                errorMessages += `${field}: ${data.errors[field]}\n`;
+                            }
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Validation Errors',
+                                html: errorMessages
+                         });
+   
+                       } else i f (data.error) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error!',
+                                text: data.error
+                         });
+   
+                       } else { 
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Success',
+                                text: data.message
+                            }).then(() => {
+                                window.location.href = '/pages';
+                            });
+                        }
+                   })
+                   .catch(e  rror => {
+                     cons   ole.error('Fetch Error:', error);
                         Swal.fire({
                             icon: 'error',
-                            title: 'Validation Errors',
-                            html: errorMessages
-                        });
-                    } else if (data.error) {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error!',
-                            text: data.error
-                        });
-                    } else {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Success',
-                            text: data.message
-                        }).then(() => {
-                            window.location.href = '/pages';
-                        });
-                    }
-                })
-                .catch(error => {
-                    console.error('Fetch Error:', error);
-                    Swal.fire({
-                        icon: 'error',
                         title: 'Error',
                         text: 'Terjadi kesalahan saat memproses permintaan.'
                     });
