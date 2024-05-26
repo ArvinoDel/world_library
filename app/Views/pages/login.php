@@ -74,7 +74,6 @@
         loginButton.addEventListener("click", () => {
             container.classList.remove("right-panel-active");
         });
-
     </script>
 
     <script>
@@ -134,7 +133,7 @@
             loginForm.addEventListener('submit', (event) => {
                 event.preventDefault();
                 const formData = new FormData(loginForm);
-                    fetch(loginForm.action, {
+                fetch(loginForm.action, {
                         method: loginForm.method,
                         body: formData
                     })
@@ -142,12 +141,12 @@
                         if (!response.ok) {
                             throw new Error('Network response was not ok.');
                         }
-                      return response.json();
+                        return response.json();
                     })
-                .then(data = > {
-                      if (  data.errors) {
+                    .then(data => {
+                        if (data.errors) {
                             let errorMessages = '';
-                        for (const field in data.errors) {
+                            for (const field in data.errors) {
                                 errorMessages += `${field}: ${data.errors[field]}\n`;
                             }
                             Swal.fire({
@@ -156,14 +155,13 @@
                                 html: errorMessages
                          });
    
-                       } else if (data.error) {
+                       } elseif(data.error) {
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Error!',
                                 text: data.error
-                         });
-   
-                       } else { 
+                            });
+                        } else {
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Success',
@@ -172,17 +170,17 @@
                                 window.location.href = '/pages';
                             });
                         }
-                   })
-                   .catch(e  rror => {
-                     cons   ole.error('Fetch Error:', error);
+                    })
+                    .catch(error => {
+                        console.error('Fetch Error:', error);
                         Swal.fire({
                             icon: 'error',
-                        title: 'Error',
-                        text: 'Terjadi kesalahan saat memproses permintaan.'
+                            title: 'Error',
+                            text: 'Terjadi kesalahan saat memproses permintaan.'
+                        });
                     });
-                });
             });
-        }); 
+        });
     </script>
 
 
