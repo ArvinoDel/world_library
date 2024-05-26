@@ -17,6 +17,7 @@
             <form action="<?= base_url('/register') ?>" method="POST">
                 <h1>Register Here</h1>
                 <input type="text" placeholder="Name" name="username" required>
+                <input type="tel" name="phone" placeholder="Phone Number" pattern="\+62\d{2}-\d{4}-\d{4}" required>
                 <input type="email" placeholder="Email" name="email" required>
                 <input type="password" placeholder="Password" name="password" required>
                 <input type="file" name="file" required>
