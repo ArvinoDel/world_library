@@ -11,6 +11,17 @@
 
 <body>
     <div class="container light-style flex-grow-1 container-p-y">
+    <?php if (session()->has('success')): ?>
+            <div class="alert alert-success">
+                <?= session('success') ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (session()->has('errors')): ?>
+            <div class="alert alert-danger">
+                <?= session('errors') ?>
+            </div>
+        <?php endif; ?>
         <h4 class="font-weight-bold py-3 mb-4">
             Account settings
         </h4>
@@ -24,6 +35,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
+                    <form action="/update" method="post">
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="account-general">
                             <div class="card-body media align-items-center">
@@ -42,17 +54,17 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label class="form-label">Username</label>
-                                    <input type="text" name="usn" class="form-control mb-1" placeholder="Create Your Username" required>
+                                    <input type="text" name="usn" class="form-control mb-1" placeholder="Create Your Username" value="<?php echo session('user')['username'] ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <!-- INI VALUE NYA SAMA KAYAK DI DATABASE YAA -->
                                     <label class="form-label">Name</label>
-                                    <input type="text" name="full_name" class="form-control" value="" required>
+                                    <input type="text" name="full_name" class="form-control" value="<?php echo session('user')['nama'] ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <!-- INI VALUE NYA SAMA KAYAK DI DATABASE YAA -->
                                     <label class="form-label">E-mail</label>
-                                    <input type="email" name="email" class="form-control mb-1" value="" required>
+                                    <input type="email" name="email" class="form-control mb-1" value="<?php echo session('user')['email'] ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +73,7 @@
                                 <div class="form-group">
                                     <!-- INI VALUE CURRENT PW NYA SAMA KAYAK DI DATABASE YAA -->
                                     <label class="form-label">Current password</label>
-                                    <input type="password" class="form-control" value="">
+                                    <input type="password" class="form-control" value="<?php echo session('user')['password'] ?>">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">New password</label>
@@ -285,7 +297,7 @@
                                 <div class="form-group">
                                     <label class="form-label">Phone</label>
                                     <!-- INI VALUE NYA SAMA KAYAK DI DATABASE YAA -->
-                                    <input type="text" class="form-control" value=" " required>
+                                    <input type="text" class="form-control" value="<?php echo session('user')['telp'] ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -294,9 +306,10 @@
             </div>
         </div>
         <div class="text-right mt-3">
-            <button type="button" class="btn btn-primary">Save changes</button>&nbsp;
+            <button type="submit" class="btn btn-primary">Save changes</button>&nbsp;
             <button type="button" class="btn btn-default">Cancel</button>
         </div>
+    </form>
     </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>

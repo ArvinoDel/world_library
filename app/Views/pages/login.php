@@ -20,7 +20,6 @@
                 <input type="tel" name="phone" placeholder="Phone Number" value="+62" pattern="+62\d{3}-\d{4}-\d{4}" required>
                 <input type="email" placeholder="Email" name="email" required>
                 <input type="password" placeholder="Password" name="password" required>
-                <input type="file" name="file" required>
                 <button type="submit">Register</button>
                 <span>© 2024 WorldLibrary</span>
             </form>
