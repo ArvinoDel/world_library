@@ -34,9 +34,9 @@
                         <input type="checkbox" name="checkbox" id="checkbox">
                         <label>Remember Me</label>
                     </div>
-                    <div class="pass-link">
-                        <a href="#">Forgot Password?</a>
-                    </div>
+                </div>
+                <div class="pass-link">
+                    <a href="#">Forgot Password?</a>
                 </div>
                 <button type="submit">Login</button>
                 <span>© 2024 WorldLibrary</span>
