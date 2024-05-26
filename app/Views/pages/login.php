@@ -19,13 +19,9 @@
                 <input type="text" placeholder="Name" name="username" required>
                 <input type="email" placeholder="Email" name="email" required>
                 <input type="password" placeholder="Password" name="password" required>
+                <input type="file" name="file" required>
                 <button type="submit">Register</button>
-                <span>Or use your account</span>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-                    <a href="#" class="social"><i class="lni lni-google"></i></a>
-                    <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
-                </div>
+                <span>© 2024 WorldLibrary</span>
             </form>
         </div>
         <div class="form-container login-container">
@@ -43,12 +39,7 @@
                     </div>
                 </div>
                 <button type="submit">Login</button>
-                <span>or use your account</span>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-                    <a href="#" class="social"><i class="lni lni-google"></i></a>
-                    <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
-                </div>
+                <span>© 2024 WorldLibrary</span>
             </form>
         </div>
         <div class="overlay-container">
