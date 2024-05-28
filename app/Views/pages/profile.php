@@ -21,6 +21,7 @@
             <?php if (session()->has('errors')) : ?>
                 <div class="alert alert-danger">
                     <?= session('errors') ?>
+                    
                 </div>
             <?php endif; ?>
             <h4 class="font-weight-bold py-3 mb-4">
@@ -91,11 +92,11 @@
                                 <div class="card-body pb-2">
                                     <div class="form-group">
                                         <label class="form-label">Birthday</label>
-                                        <input type="date" class="form-control" value="" required>
+                                        <input Value="<?php echo session('user')['birthday']?>" type="date" name="birthday" class="form-control" value="">
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label" for="gender">Gender:</label>
-                                        <select class="custom-select" id="gender" name="gender">
+                                        <select Value="<?php session('user')['gender']?>" class="custom-select" id="gender" name="gender">
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                             <option value="other">Non-Binary</option>
@@ -103,7 +104,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Country</label>
-                                        <select class="custom-select">
+                                        <select Value="<?php session('user')['country']?>" name="country" class="custom-select">
                                             <option>Afghanistan</option>
                                             <option>Albania</option>
                                             <option>Algeria</option>
@@ -317,7 +318,7 @@
             </div>
             <div class="text-right mt-3">
                 <button type="submit" class="btn btn-primary">Save changes</button>
-                <button type="submit" class="btn btn-default" onclick="history.back();">Cancel</button>
+                <button type="button" class="btn btn-default" onclick="history.back();">Cancel</button>
             </div>
     </form>
     </div>

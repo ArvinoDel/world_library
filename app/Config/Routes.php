@@ -17,3 +17,4 @@ $routes->post('/login' , 'auth::login');
 $routes->Post('/register' , 'auth::register');
 $routes->post('/logout', 'auth::logout');
 $routes->post('/update', 'auth::update');
+$routes->post('/update', 'auth::update');
