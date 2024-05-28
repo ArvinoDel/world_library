@@ -56,6 +56,42 @@ class Pages extends BaseController
         return view('pages/profile', $data);
     }
 
+    public function admin(){
+        $data = [
+            'title' => "Admin | WorldLibrary",
+            'scrumb' => "Admin",
+            'title_link' => 'admin',
+            ];
+            return view('pages/admin', $data);
+    }
+
+    public function tambah(){
+        $data = [
+            'title' => "Add Product | WorldLibrary",
+            'scrumb' => "Add Product",
+            'title_link' => 'tambah',
+            ];
+            return view('pages/tambah', $data);
+    }
+
+    public function user(){
+        $data = [
+            'title' => "User | WorldLibrary",
+            'scrumb' => "User",
+            'title_link' => 'user',
+            ];
+            return view('pages/user', $data);
+    }
+
+    public function pinjam(){
+        $data = [
+            'title' => "Pinjam | WorldLibrary",
+            'scrumb' => "Pinjam",
+            'title_link' => 'pinjam',
+            ];
+            return view('pages/pinjam', $data);
+    }
+
     // public function contact()
     // {
     //     $data = [

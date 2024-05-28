@@ -12,6 +12,12 @@ $routes->get('/pages/about', 'Pages::about');
 $routes->get('/pages/product', 'Pages::product');
 $routes->get('/pages/profile', 'Pages::profile');
 $routes->post('/pages/profile', 'Pages::profile');
+$routes->post('/pages/admin', 'Pages::admin');
+$routes->post('/pages/tambah', 'Pages::tambah');
+$routes->post('/pages/user', 'Pages::user');
+$routes->post('/pages/pinjam', 'Pages::pinjam');
+
+
 $routes->get('/login' , 'auth::index');
 $routes->post('/login' , 'auth::login');
 $routes->Post('/register' , 'auth::register');
