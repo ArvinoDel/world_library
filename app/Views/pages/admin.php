@@ -40,7 +40,7 @@
                                 <!-- dibikin foreach -->
                                 <tr class="data-list">
                                     <td><span class="data id">1</span></td>
-                                    <td><img src="img/buku1.jpg" alt="" class="cover"></td>
+                                    <td><img src="<?= base_url('img/buku1.jpg') ?>" alt="" class="cover"></td>
                                     <td><span class="data title">The Woman without name</span></td>
                                     <td><span class="data date">2022-02-12</span></td>
                                     <td><span class="data Category">Horror</span></td>
@@ -55,7 +55,7 @@
                                 </tr>
                                 <tr class="data-list">
                                     <td><span class="data id">2</span></td>
-                                    <td><img src="img/buku1.jpg" alt="" class="cover"></td>
+                                    <td><img src="<?= base_url('img/buku1.jpg') ?>" alt="" class="cover"></td>
                                     <td><span class="data title">The Woman without name</span></td>
                                     <td><span class="data date">2022-02-12</span></td>
                                     <td><span class="data Category">Horror</span></td>
@@ -70,7 +70,7 @@
                                 </tr>
                                 <tr class="data-list">
                                     <td><span class="data id">3</span></td>
-                                    <td><img src="img/buku1.jpg" alt="" class="cover"></td>
+                                    <td><img src="<?= base_url('img/buku1.jpg') ?>" alt="" class="cover"></td>
                                     <td><span class="data title">The Woman without name</span></td>
                                     <td><span class="data date">2022-02-13</span></td>
                                     <td><span class="data Category">Horror</span></td>
@@ -85,7 +85,7 @@
                                 </tr>
                                 <tr class="data-list">
                                     <td><span class="data id">4</span></td>
-                                    <td><img src="img/buku1.jpg" alt="" class="cover"></td>
+                                    <td><img src="<?= base_url('img/buku1.jpg') ?>" alt="" class="cover"></td>
                                     <td><span class="data title">The Woman without name</span></td>
                                     <td><span class="data date">2022-02-13</span></td>
                                     <td><span class="data Category">Horror</span></td>
@@ -100,7 +100,7 @@
                                 </tr>
                                 <tr class="data-list">
                                     <td><span class="data id">5</span></td>
-                                    <td><img src="img/buku1.jpg" alt="" class="cover"></td>
+                                    <td><img src="<?= base_url('img/buku1.jpg') ?>" alt="" class="cover"></td>
                                     <td><span class="data title">The Woman without name</span></td>
                                     <td><span class="data date">2022-02-14</span></td>
                                     <td><span class="data Category">Horror</span></td>
@@ -116,7 +116,7 @@
                                 </tr>
                                 <tr class="data-list">
                                     <td><span class="data id">6</span></td>
-                                    <td><img src="img/buku1.jpg" alt="" class="cover"></td>
+                                    <td><img src="<?= base_url('img/buku1.jpg') ?>" alt="" class="cover"></td>
                                     <td><span class="data title">The Woman without name</span></td>
                                     <td><span class="data date">2022-02-14</span></td>
                                     <td><span class="data Category">Horror</span></td>
@@ -132,7 +132,7 @@
                                 </tr>
                                 <tr class="data-list">
                                     <td><span class="data id">7</span></td>
-                                    <td><img src="img/buku1.jpg" alt="" class="cover"></td>
+                                    <td><img src="<?= base_url('img/buku1.jpg') ?>" alt="" class="cover"></td>
                                     <td><span class="data title">The Woman without name</span></td>
                                     <td><span class="data date">2022-02-15</span></td>
                                     <td><span class="data Category">Horror</span></td>
