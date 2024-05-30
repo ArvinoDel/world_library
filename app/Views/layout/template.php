@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/style2.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/style6.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('css/style7.css') ?>">
+
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>">
 
     <!-- Google Web Fonts -->

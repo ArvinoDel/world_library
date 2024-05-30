@@ -102,6 +102,15 @@ class Pages extends BaseController
         ];
         return view('pages/category', $data);
     }
+
+    public function detail(){
+        $data = [
+            'title' => "Detail | WorldLibrary",
+            'scrumb' => "Detail",
+            'title_link' => "detail",
+        ];
+        return view('/detail', $data);
+    }
     // public function contact()
     // {
     //     $data = [

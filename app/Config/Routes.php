@@ -12,6 +12,8 @@ $routes->get('/pages/about', 'Pages::about');
 $routes->get('/pages/product', 'Pages::product');
 $routes->get('/pages/profile', 'Pages::profile');
 $routes->get('/pages/category', 'Pages::category');
+$routes->get('/detail', 'Pages::detail');
+
 $routes->get('/pages/admin', 'DashboardController::index');
 $routes->get('/pages/user', 'Pages::user');
 $routes->get('/pages/tambah', 'Tambah::index');

@@ -34,7 +34,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price">Free</span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price">Free</span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price">Free</span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
 
@@ -79,7 +79,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price"></span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price">Free</span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
 
@@ -109,7 +109,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price">Free</span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
 
@@ -124,7 +124,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price">Free</span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
 
@@ -139,7 +139,7 @@
                             <span class="old-price">Category: </span>
                             <span class="new-price">Free</span>
                         </div>
-                        <a href="#" class="add-btn">Pinjam</a>
+                        <a href="/detail" class="add-btn">Pinjam</a>
                     </div>
                 </div>
             </div>
