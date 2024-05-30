@@ -11,6 +11,8 @@ $routes->get('/pages/contact', 'Pages::contact');
 $routes->get('/pages/about', 'Pages::about');
 $routes->get('/pages/product', 'Pages::product');
 $routes->get('/pages/profile', 'Pages::profile');
+$routes->get('/pages/category', 'Pages::category');
+
 $routes->post('/pages/profile', 'Pages::profile');
 $routes->post('/pages/admin', 'Pages::admin');
 $routes->post('/pages/tambah', 'Pages::tambah');

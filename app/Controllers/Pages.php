@@ -92,6 +92,14 @@ class Pages extends BaseController
             return view('pages/pinjam', $data);
     }
 
+    public function category(){
+        $data = [
+            'title' => "Category | WorldLibrary",
+            'scrumb' => "Category",
+            'title_link' => "category",
+        ];
+        return view('pages/category', $data);
+    }
     // public function contact()
     // {
     //     $data = [
