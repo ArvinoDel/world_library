@@ -24,7 +24,7 @@
         <div class="about-home-content">
             <h1>Hi, It's <span class="about-logo-span">Andika</span></h1>
             <h3 class="about-text-animation">I'm a <span class="about-logo-span"></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quia aspernatur ut voluptatum ratione expedita mollitia doloribus, rerum dolorem eligendi et consectetur nostrum magni asperiores, tempora eveniet repellat corrupti. Saepe!</p>
+            <p>"Hi there! Thank you for visiting my page. I'm Andika, a CEO & CTO on WorldLibrary. Here, you'll find insights into my journey, achievements, and what inspires me every day. I appreciate your interest and look forward to connecting with you."</p>
             <div class="about-social-icons">
                 <a href="#"><i class='bx bxl-linkedin'></i></a>
                 <a href="#"><i class='bx bxl-instagram-alt'></i></a>
@@ -37,7 +37,7 @@
             </div>
         </div>
             <div class="about-home-img">
-                <img src="<?= base_url('img/team-3.jpg'); ?>" alt="">
+                <img src="<?= base_url('img/andika.png'); ?>" alt="">
             </div>
     </section>
 
@@ -45,7 +45,7 @@
         <div class="about-home-content">
             <h1>Hi, It's <span class="about-logo-span">Faiz</span></h1>
             <h3 class="about-text-animation2">I'm a <span class="about-logo-span"></span></h3>
-            <p class="about-home">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quia aspernatur ut voluptatum ratione expedita mollitia doloribus, rerum dolorem eligendi et consectetur nostrum magni asperiores, tempora eveniet repellat corrupti. Saepe!</p>
+            <p class="about-home">"Hello and welcome! I'm delighted to have you here. My name is Faiz, and I'm passionate about Backend. This page is a glimpse into my world, my experiences, and what drives me. Thank you for stopping by, and I hope you enjoy learning more about me.</p>
             <div class="about-social-icons">
                 <a href="#"><i class='bx bxl-linkedin'></i></a>
                 <a href="#"><i class='bx bxl-instagram-alt'></i></a>
@@ -58,7 +58,7 @@
             </div>
         </div>
             <div class="about-home-img">
-                <img src="<?= base_url('img/team-3.jpg'); ?>" alt="">
+                <img src="<?= base_url('img/faiz.jpg'); ?>" alt="">
             </div>
     </section>
 
@@ -66,8 +66,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded p-4">
                         <img class="img-fluid rounded mb-4" src="<?= base_url('img/team-1.jpg'); ?>" alt="">
-                        <h5>Adam Crew</h5>
-                        <p class="text-primary">Founder</p>
+                        <h5>Arif Suseno</h5>
+                        <p class="text-primary">Team</p>
                         <div class="d-flex justify-content-center">
                             <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -77,9 +77,9 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded p-4">
-                        <img class="img-fluid rounded mb-4" src="<?= base_url('img/team-2.jpg'); ?>" alt="">
-                        <h5>Doris Jordan</h5>
-                        <p class="text-primary">Veterinarian</p>
+                        <img class="img-fluid rounded mb-4" src="<?= base_url('img/vio.jpg'); ?>" alt="">
+                        <h5>Vionna Nisa</h5>
+                        <p class="text-primary">Team</p>
                         <div class="d-flex justify-content-center">
                             <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
@@ -90,8 +90,8 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded p-4">
                         <img class="img-fluid rounded mb-4" src="<?= base_url('img/team-3.jpg'); ?>" alt="">
-                        <h5>Jack Dawson</h5>
-                        <p class="text-primary">Farmer</p>
+                        <h5>Muhammad Nur Nirvansyah</h5>
+                        <p class="text-primary">Team</p>
                         <div class="d-flex justify-content-center">
                             <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
