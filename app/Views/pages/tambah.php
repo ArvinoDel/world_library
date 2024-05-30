@@ -53,6 +53,10 @@
                                 <label class="form-label">Cover</label>
                                 <input type="file" name="cover" class="form-control mb-1" required>
                             </div>
+                            <div class="form-group">
+                                <label class="form-label">Deskripsi</label>
+                                <input type="text" name="deskripsi" class="form-control mb-1" required>
+                            </div>
                             <button type="submit" class="btn btn-submit">Submit</button>
                     </form>
                 </div>
