@@ -56,14 +56,14 @@ class Pages extends BaseController
         return view('pages/profile', $data);
     }
 
-    public function admin(){
-        $data = [
-            'title' => "Admin | WorldLibrary",
-            'scrumb' => "Admin",
-            'title_link' => 'admin',
-            ];
-            return view('pages/admin', $data);
-    }
+    // public function admin(){
+    //     $data = [
+    //         'title' => "Admin | WorldLibrary",
+    //         'scrumb' => "Admin",
+    //         'title_link' => 'admin',
+    //         ];
+    //         return view('pages/admin', $data);
+    // }
 
     public function tambah(){
         $data = [
@@ -97,6 +97,8 @@ class Pages extends BaseController
             'title' => "Category | WorldLibrary",
             'scrumb' => "Category",
             'title_link' => "category",
+            'bg' => '../img/bg-library0.jpg',
+
         ];
         return view('pages/category', $data);
     }

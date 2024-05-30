@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form action="/update" method="post">
+    <form action="/update" method="post" enctype="multipart/form-data">
         <div class="container light-style flex-grow-1 container-p-y">
             <?php if (session()->has('success')) : ?>
                 <div class="alert alert-success">
@@ -20,8 +20,8 @@
 
             <?php if (session()->has('errors')) : ?>
                 <div class="alert alert-danger">
-                    <?= session('errors') ?>
-                    
+
+                <?= session('errors') ?>
                 </div>
             <?php endif; ?>
             <h4 class="font-weight-bold py-3 mb-4">

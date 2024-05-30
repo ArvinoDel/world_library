@@ -1,171 +1,119 @@
 <?= $this->extend('layout/template2'); ?>
+
 <?= $this->section('content'); ?>
 
 <section class="dashboard">
-        <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
 
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here...">
-            </div>
-
-            <!-- hubungin ke database, kalo ada fotonya -->
-            <img src="img/user.png" alt="">
-            <!--<img src="images/profile.jpg" alt="">-->
+        <div class="search-box">
+            <i class="uil uil-search"></i>
+            <input type="text" placeholder="Search here...">
         </div>
 
-        <div class="dash-content">
-            <div class="overview">
-                <div class="tab-content">
-                    <hr class="border-light m-0">
-                    <div class="title">
-                        <i class="uil uil-plus"></i>
-                        <span class="text">Add Buku</span>
-                    </div>
-                    <form action="" method="POST">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label class="form-label">Title</label>
-                                <input type="text" name="title" class="form-control mb-1" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Penulis</label>
-                                <input type="text" name="penulis" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Penerbit</label>
-                                <input type="email" name="penerbit" class="form-control mb-1" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Jumlah</label>
-                                <input type="number" name="jumlah" class="form-control mb-1" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="kategori">Kategori:</label>
-                                <select class="custom-select" id="kategori" name="kategori">
-                                    <option value="horror">Horror</option>
-                                    <option value="fantasi">Fantasi</option>
-                                    <option value="drama">Drama</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Cover</label>
-                                <input type="file" name="cover" class="form-control mb-1" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Deskripsi</label>
-                                <input type="text" name="deskripsi" class="form-control mb-1" required>
-                            </div>
-                            <button type="submit" class="btn btn-submit">Submit</button>
-                    </form>
+        <!-- If user image is available in database -->
+        <img src="<?= base_url('img/user.png'); ?>" alt="">
+    </div>
+
+    <div class="dash-content">
+        <div class="overview">
+            <div class="tab-content">
+                <hr class="border-light m-0">
+                <div class="title">
+                    <i class="uil uil-plus"></i>
+                    <span class="text">Add Buku</span>
                 </div>
-            </div>
-        </div>
-        <div class="book">
-            <div class="title">
-                <i class="uil uil-book-alt"></i>
-                <span class="text">Data Buku</span>
-            </div>
+                <form action="<?= base_url('/pages/tambah'); ?>" method="POST" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label">Title</label>
+                            <input type="text" name="title" class="form-control mb-1" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Penulis</label>
+                            <input type="text" name="penulis" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Penerbit</label>
+                            <input type="text" name="penerbit" class="form-control mb-1" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Jumlah</label>
+                            <input type="number" name="jumlah" class="form-control mb-1" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="kategori">Kategori</label>
+                            <select class="custom-select" id="kategori" name="kategori" required>
+                                <option value="Horror">Horror</option>
+                                <option value="Fantasi">Fantasi</option>
+                                <option value="Drama">Drama</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Cover</label>
+                            <input type="file" name="cover" class="form-control mb-1" required>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </div>
+                </form>
 
-            <div class="book-data">
-                <table>
-                    <thead>
-                        <tr class="data-list">
-                            <th class="data-title">#</th>
-                            <th class="data-title">Cover</th>
-                            <th class="data-title">Name</th>
-                            <th class="data-title">Date</th>
-                            <th class="data-title">Category</th>
-                            <th class="data-title">Writer</th>
-                            <th class="data-title">Penerbit</th>
-                            <th class="data-title">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- dibikin foreach -->
-                        <tr class="data-list">
-                            <td><span class="data id">1</span></td>
-                            <td><img src="img/buku1.jpg" alt="" class="cover"></td>
-                            <td><span class="data title">The Woman without name</span></td>
-                            <td><span class="data date">2022-02-12</span></td>
-                            <td><span class="data Category">Horror</span></td>
-                            <!-- ini dibikin kondisi apabila status completed maka span class status completed
-                                kalo status pending ya pending class nya
-                                -->
-                            <td><span class="data writer">Andika SNM</span> </td>
-                            <td><span class="data penerbit">M. Faiz F</span> </td>
-                            <td><span class="data jumlah">12</span> </td>
-                        </tr>
-                        <tr class="data-list">
-                            <td><span class="data id">2</span></td>
-                            <td><img src="img/buku1.jpg" alt="" class="cover"></td>
-                            <td><span class="data title">The Woman without name</span></td>
-                            <td><span class="data date">2022-02-12</span></td>
-                            <td><span class="data Category">Horror</span></td>
-                            <td><span class="data writer">Andika SNM</span></td>
-                            <td><span class="data penerbit">M. Faiz F</span> </td>
-                            <td><span class="data jumlah">12</span> </td>
-                        </tr>
-                        <tr class="data-list">
-                            <td><span class="data id">3</span></td>
-                            <td><img src="img/buku1.jpg" alt="" class="cover"></td>
-                            <td><span class="data title">The Woman without name</span></td>
-                            <td><span class="data date">2022-02-13</span></td>
-                            <td><span class="data Category">Horror</span></td>
-                            <td><span class="data writer">Andika SNM</span></td>
-                            <td><span class="data penerbit">M. Faiz F</span> </td>
-                            <td><span class="data jumlah">12</span> </td>
-                        </tr>
-                        <tr class="data-list">
-                            <td><span class="data id">4</span></td>
-                            <td><img src="img/buku1.jpg" alt="" class="cover"></td>
-                            <td><span class="data title">The Woman without name</span></td>
-                            <td><span class="data date">2022-02-13</span></td>
-                            <td><span class="data Category">Horror</span></td>
-                            <td><span class="data writer">Andika SNM</span></td>
-                            <td><span class="data penerbit">M. Faiz F</span> </td>
-                            <td><span class="data jumlah">12</span> </td>
-                        </tr>
-                        <tr class="data-list">
-                            <td><span class="data id">5</span></td>
-                            <td><img src="img/buku1.jpg" alt="" class="cover"></td>
-                            <td><span class="data title">The Woman without name</span></td>
-                            <td><span class="data date">2022-02-14</span></td>
-                            <td><span class="data Category">Horror</span></td>
-                            <td><span class="data writer">Andika SNM</span>
-                            </td>
-                            <td><span class="data penerbit">M. Faiz F</span> </td>
-                            <td><span class="data jumlah">12</span> </td>
-                        </tr>
-                        <tr class="data-list">
-                            <td><span class="data id">6</span></td>
-                            <td><img src="img/buku1.jpg" alt="" class="cover"></td>
-                            <td><span class="data title">The Woman without name</span></td>
-                            <td><span class="data date">2022-02-14</span></td>
-                            <td><span class="data Category">Horror</span></td>
-                            <td><span class="data writer">Andika SNM</span>
-                            </td>
-                            <td><span class="data penerbit">M. Faiz F</span> </td>
-                            <td><span class="data jumlah">12</span> </td>
-                        </tr>
-                        <tr class="data-list">
-                            <td><span class="data id">7</span></td>
-                            <td><img src="img/buku1.jpg" alt="" class="cover"></td>
-                            <td><span class="data title">The Woman without name</span></td>
-                            <td><span class="data date">2022-02-15</span></td>
-                            <td><span class="data Category">Horror</span></td>
-                            <td><span class="data writer">Andika SNM</span>
-                            </td>
-                            <td><span class="data penerbit">M. Faiz F</span> </td>
-                            <td><span class="data jumlah">12</span> </td>
-                        </tr>
-                        <br>
-                    </tbody>
-                </table>
+                <?php if (isset($validation)): ?>
+                    <div class="alert alert-danger">
+                        <?= $validation->listErrors(); ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
+    </div>
+
+    <div class="book">
+        <div class="title">
+            <i class="uil uil-book-alt"></i>
+            <span class="text">Data Buku</span>
         </div>
-    </section>
+
+        <div class="book-data">
+            <table>
+                <thead>
+                    <tr class="data-list">
+                        <th class="data-title">#</th>
+                        <th class="data-title">Cover</th>
+                        <th class="data-title">Name</th>
+                        <th class="data-title">Date</th>
+                        <th class="data-title">Category</th>
+                        <th class="data-title">Writer</th>
+                        <th class="data-title">Penerbit</th>
+                        <th class="data-title">Total</th>
+                        <th class="data-title">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (isset($buku)): ?>
+                        <?php foreach ($buku as $book): ?>
+                            <tr>
+                                <td><?= $book['id']; ?></td>
+                                <td><img src="<?= base_url('img/' . $book['cover']); ?>" alt="<?= $book['judul']; ?>"></td>
+                                <td><?= $book['judul']; ?></td>
+                                <td><?= $book['tahun']; ?></td>
+                                <td><?= $book['kategori']; ?></td>
+                                <td><?= $book['penulis']; ?></td>
+                                <td><?= $book['penerbit']; ?></td>
+                                <td><?= $book['jumlah']; ?></td>
+                                <td>
+                                    <a href="<?= base_url('buku/edit/' . $book['id']); ?>" class="btn btn-edit">Edit</a>
+                                    <a href="<?= base_url('buku/delete/' . $book['id']); ?>" class="btn btn-delete" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?');">Delete</a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <tr>
+                            <td colspan="9">Tidak ada data buku.</td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
 
 <?= $this->endSection(); ?>

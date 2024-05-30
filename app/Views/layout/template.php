@@ -15,7 +15,7 @@
     <link href="img/favicon.ico" rel="icon">
     <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/style2.css') ?>">
-    <script src="<?= base_url('css/style6.css') ?>"></script>
+    <link rel="stylesheet" href="<?= base_url('css/style6.css') ?>">
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>">
 
     <!-- Google Web Fonts -->
