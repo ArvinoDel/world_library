@@ -26,9 +26,9 @@
             <h3 class="about-text-animation">I'm a <span class="about-logo-span"></span></h3>
             <p>"Hi there! Thank you for visiting my page. I'm Andika, a CEO & CTO on WorldLibrary. Here, you'll find insights into my journey, achievements, and what inspires me every day. I appreciate your interest and look forward to connecting with you."</p>
             <div class="about-social-icons">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/andika-supriyadi-nur-maulana-9140a0244/"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/itsmedikaa_/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://github.com/ArvinoDel"><i class='bx bxl-github' ></i></a>
                 <a href="#"><i class='bx bxl-twitter' ></i></a>
             </div>
 
