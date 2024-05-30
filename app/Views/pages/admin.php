@@ -33,7 +33,7 @@
                                 <th class="data-title">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="book-data">
                             <?php if (!empty($books)): ?>
                                 <?php foreach ($books as $book): ?>
                                     <tr class="data-list">
@@ -42,7 +42,7 @@
                                         <td><span class="data title"><?= $book['judul'] ?></span></td>
                                         <td><span class="data date"><?= $book['tahun'] ?></span></td>
                                         <td><span class="data Category"><?= $book['kategori'] ?></span></td>
-                                        <td><span class="data writer"><?= $book['penulis_id'] ?></span></td>
+                                        <td><span class="data writer"><?= $book['penulis'] ?></span></td>
                                         <td>
                                             <a href="edit.html" style="text-decoration: none; color: white;">
                                                 <button class="custom-btn"><i class='bx bx-edit-alt'></i>Edit</button>
@@ -61,7 +61,7 @@
                             <?php endif; ?>
                             <tr class="data-list">
                                 <td colspan="7">
-                                    <a href="tambah.html" style="text-decoration: none; color: black;">
+                                    <a href="/pages/tambah" style="text-decoration: none; color: black;">
                                         <button class="custom-btn2">Tambah</button>
                                     </a>
                                 </td>
@@ -114,5 +114,52 @@
         </div>
     </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function fetchBooks() {
+        $.ajax({
+            url: '<?= base_url('admin/fetchBooks') ?>',
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                const tbody = $('#book-data');
+                tbody.empty();
+
+                if (data.books.length === 0) {
+                    tbody.append('<tr class="data-list"><td colspan="7">No books available.</td></tr>');
+                } else {
+                    data.books.forEach(book => {
+                        const row = `
+                            <tr class="data-list">
+                                <td><span class="data id">${book.id}</span></td>
+                                <td><img src="<?= base_url('image/') ?>${book.cover}" alt="" class="cover"></td>
+                                <td><span class="data title">${book.judul}</span></td>
+                                <td><span class="data date">${book.tahun}</span></td>
+                                <td><span class="data Category">${book.kategori}</span></td>
+                                <td><span class="data writer">${book.penulis}</span></td>
+                                <td>
+                                    <a href="edit.html" style="text-decoration: none; color: white;">
+                                        <button class="custom-btn"><i class='bx bx-edit-alt'></i>Edit</button>
+                                    </a>
+                                    &nbsp;
+                                    <a href="hapus.html" style="text-decoration: none; color: white;">
+                                        <button class="custom-btn1"><i class='bx bx-trash'></i>Delete</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        `;
+                        tbody.append(row);
+                    });
+                }
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        fetchBooks();
+        setInterval(fetchBooks); // Fetch data every 5 seconds
+    });
+</script>
 
 <?= $this->endSection(); ?>

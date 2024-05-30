@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
-$routes->get('/', 'Pages::index');
+$routes->get('/pages', 'Pages::index');
 $routes->get('/pages/contact', 'Pages::contact');
 $routes->get('/pages/about', 'Pages::about');
 $routes->get('/pages/product', 'Pages::product');
@@ -17,15 +17,16 @@ $routes->get('/detail', 'Pages::detail');
 $routes->get('/pages/admin', 'DashboardController::index');
 $routes->get('/pages/user', 'Pages::user');
 $routes->get('/pages/tambah', 'Tambah::index');
-$routes->get('/login' , 'auth::index');
+$routes->get('/login', 'Auth::index');
+
+// Route for fetching books data via AJAX
+$routes->get('/admin/fetchBooks', 'DashboardController::fetchBooks');
 
 $routes->post('/pages/profile', 'Pages::profile');
 $routes->post('/pages/tambah', 'Tambah::tambah');
 $routes->post('/pages/pinjam', 'Pages::pinjam');
 
-
-$routes->post('/login' , 'auth::login');
-$routes->Post('/register' , 'auth::register');
-$routes->post('/logout', 'auth::logout');
-$routes->post('/update', 'auth::update');
-$routes->post('/update', 'auth::update');
+$routes->post('/login', 'Auth::login');
+$routes->post('/register', 'Auth::register');
+$routes->post('/logout', 'Auth::logout');
+$routes->post('/update', 'Auth::update');

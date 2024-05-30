@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Controllers;
 
@@ -35,48 +35,60 @@ class Tambah extends Controller
             ];
 
             // Validasi input
-            $this->validate($rules);
+            if (!$this->validate($rules)) {
+                return redirect()->back()->withInput()->with('validation', $this->validator);
+            }
 
-            
+            // Simpan data penulis dan dapatkan ID
+            $penulisModel = new PenulisModel();
+            $penulisData = ['nama' => $this->request->getPost('penulis')];
+            $penulis = $penulisModel->where('nama', $penulisData['nama'])->first();
+            if (!$penulis) {
+                $penulisModel->save($penulisData);
+                $penulisId = $penulisModel->insertID();
+            } else {
+                $penulisId = $penulis['id'];
+            }
+
+            // Simpan data kategori dan dapatkan ID
+            $kategoriModel = new KategoriModel();
+            $kategoriData = ['nama' => $this->request->getPost('kategori')];
+            $kategori = $kategoriModel->where('nama', $kategoriData['nama'])->first();
+            if (!$kategori) {
+                $kategoriModel->save($kategoriData);
+                $kategoriId = $kategoriModel->insertID();
+            } else {
+                $kategoriId = $kategori['id'];
+            }
+
+            // Simpan data penerbit dan dapatkan ID
+            $penerbitModel = new PenerbitModel();
+            $penerbitData = ['nama' => $this->request->getPost('penerbit')];
+            $penerbit = $penerbitModel->where('nama', $penerbitData['nama'])->first();
+            if (!$penerbit) {
+                $penerbitModel->save($penerbitData);
+                $penerbitId = $penerbitModel->insertID();
+            } else {
+                $penerbitId = $penerbit['id'];
+            }
 
             // Simpan data buku
             $bookModel = new BookModel();
             $dataBuku = [
                 'judul' => $this->request->getPost('title'),
-                'tahun' => date('Y'), // Get the current year
+                'tahun' => date('Y-m-d H:i:s'), // Menyimpan tanggal saat ini
                 'jumlah' => $this->request->getPost('jumlah'),
-                'kategori' => $this->request->getPost('kategori'),
-
+                'kategori_id' => $kategoriId,
+                'penulis_id' => $penulisId,
+                'penerbit_id' => $penerbitId,
                 'cover' => $this->saveCover(),
             ];
             $bookModel->save($dataBuku);
 
-            // Simpan data penulis
-            $penulisModel = new PenulisModel();
-            $penulisData = ['nama' => $this->request->getPost('penulis')];
-            $penulisModel->save($penulisData);
-
-            // Simpan data kategori
-            $kategoriModel = new KategoriModel();
-            $kategoriData = ['nama' => $this->request->getPost('kategori')];
-            $kategoriModel->save($kategoriData);
-
-            // Simpan data penerbit
-            $penerbitModel = new PenerbitModel();
-            $penerbitData = ['nama' => $this->request->getPost('penerbit')];
-            $penerbitModel->save($penerbitData);
-            dd($penulisData,$kategoriData,$penerbitData,$this->saveCover());
-
-            $data2 = [
-                'title' => "Add Product | WorldLibrary",
-                'scrumb' => "Add Product",
-                'title_link' => 'tambah',
-            ];
             // Redirect dengan flash data
-            return redirect()->to('/pages/tambah',)->with('buku', $bookModel->findAll());
+            return redirect()->to('/pages/tambah')->with('success', 'Buku berhasil ditambahkan');
         } catch (\Exception $e) {
-            $data['validation'] = $this->validator;
-            return view('/pages/tambah', $data);
+            return redirect()->back()->withInput()->with('error', $e->getMessage());
         }
     }
 
@@ -85,7 +97,7 @@ class Tambah extends Controller
     {
         $cover = $this->request->getFile('cover');
         $coverName = $cover->getRandomName();
-        $cover->move('img/', $coverName);
+        $cover->move('image/', $coverName);
         return $coverName;
     }
 }

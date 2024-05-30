@@ -22,4 +22,12 @@ class DashboardController extends BaseController
 
         return view('/pages/admin', $data);
     }
+
+    public function fetchBooks()
+    {
+        $bookModel = new BookModel();
+        $data['books'] = $bookModel->getBooksWithDetails();
+
+        return $this->response->setJSON($data);
+    }
 }

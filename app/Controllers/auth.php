@@ -95,28 +95,24 @@ class Auth extends BaseController
             'country' => $this->request->getPost('country'),
             'gender' => $this->request->getPost('gender'),
             'telp' => $this->request->getPost('telp'),
+            'image' => $this->saveImage()
         ];
     
-        if ($file = $this->request->getFile('img')) {
-            if ($file->isValid() && !$file->hasMoved()) {
-                $newName = $file->getRandomName();
-                if ($file->move(WRITEPATH . 'uploads', $newName)) {
-                    $data['image'] = $newName;
-                } else {
-                    return redirect()->back()->withInput()->with('errors', ['File upload failed.']);
-                }
-            } else {
-                return redirect()->back()->withInput()->with('errors', $file->getErrorString());
-            }
-        }
-    
+        
         $userModel = new UserModel();
         $userModel->update(session('user')['id'], $data);
-    
+        
+        dd($this->saveImage());
         return redirect()->back()->with('success', 'Profile updated successfully');
     }
 
-
+    private function saveImage()
+    {
+        $image = $this->request->getFile('img');
+        $imageName = $image->getRandomName();
+        $image->move('image/', $imageName);
+        return $imageName;
+    }
 private function getCountryList() {
     return [
         'Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 
