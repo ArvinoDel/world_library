@@ -85,6 +85,52 @@
 .animated-button:hover::before {
     transform: scaleX(1);
 }
+
+.modal {
+    display: none; /* Inisialisasi modal sebagai tidak ditampilkan */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+        
+#successMessage {
+    color: green;
+    margin: 0 0 20px 0;
+}
 .animated-button:hover {
     color: #fff;
     border-color: yellowgreen;
