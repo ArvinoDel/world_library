@@ -38,7 +38,7 @@
                                 <?php foreach ($books as $book): ?>
                                     <tr class="data-list">
                                         <td><span class="data id"><?= $book['id'] ?></span></td>
-                                        <td><img src="<?= base_url('img/' . $book['cover']) ?>" alt="" class="cover"></td>
+                                        <td><img src="<?= base_url('image/' . $book['cover']) ?>" alt="" class="cover"></td>
                                         <td><span class="data title"><?= $book['judul'] ?></span></td>
                                         <td><span class="data date"><?= $book['tahun'] ?></span></td>
                                         <td><span class="data Category"><?= $book['kategori'] ?></span></td>
@@ -155,11 +155,5 @@
             }
         });
     }
-
-    $(document).ready(function() {
-        fetchBooks();
-        setInterval(fetchBooks); // Fetch data every 5 seconds
-    });
-</script>
 
 <?= $this->endSection(); ?>
