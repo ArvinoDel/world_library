@@ -68,3 +68,108 @@ in APPPATH\Views\pages\tambah.php on line 98.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')
+INFO - 2024-05-31 02:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-31 02:39:20 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: pages/product]
+in APPPATH\Views\layout\navbar.php on line 22.
+ 1 APPPATH\Views\layout\navbar.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\laragon\\www\\world_library\\app\\Views\\layout\\navbar.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\world_library\\app\\Views\\layout\\navbar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(484): CodeIgniter\View\View->render('layout/navbar', [...], true)
+ 5 APPPATH\Views\layout\template.php(59): CodeIgniter\View\View->include('layout/navbar', [...])
+ 6 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\world_library\\app\\Views\\layout\\template.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('layout/template', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/product', [], true)
+10 APPPATH\Controllers\Pages.php(47): view('pages/product', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->product()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')
+INFO - 2024-05-31 02:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-31 02:50:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/detail.php"
+[Method: GET, Route: detail]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/detail.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/detail', [], true)
+ 3 APPPATH\Controllers\Pages.php(112): view('/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->detail()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')
+INFO - 2024-05-31 02:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-31 02:50:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/detail.php"
+[Method: GET, Route: detail]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/detail.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/detail', [], true)
+ 3 APPPATH\Controllers\Pages.php(112): view('/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->detail()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')
+INFO - 2024-05-31 02:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 02:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 03:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 03:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-31 03:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-31 03:16:33 --> ErrorException: Undefined array key "kategori"
+[Method: GET, Route: pages/tambah]
+in APPPATH\Views\pages\tambah.php on line 98.
+ 1 APPPATH\Views\pages\tambah.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kategori"', 'C:\\laragon\\www\\world_library\\app\\Views\\pages\\tambah.php', 98)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\world_library\\app\\Views\\pages\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/pages/tambah', [], true)
+ 5 APPPATH\Controllers\Tambah.php(27): view('/pages/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tambah->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tambah))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')
+CRITICAL - 2024-05-31 03:16:54 --> ErrorException: Undefined array key "penulis"
+[Method: GET, Route: pages/tambah]
+in APPPATH\Views\pages\tambah.php on line 99.
+ 1 APPPATH\Views\pages\tambah.php(99): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "penulis"', 'C:\\laragon\\www\\world_library\\app\\Views\\pages\\tambah.php', 99)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\world_library\\app\\Views\\pages\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/pages/tambah', [], true)
+ 5 APPPATH\Controllers\Tambah.php(27): view('/pages/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tambah->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tambah))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')
+CRITICAL - 2024-05-31 03:24:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pages/user.php"
+[Method: GET, Route: pages/user]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/user.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pages/user', [], true)
+ 3 APPPATH\Controllers\Pages.php(83): view('pages/user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pages->user()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')

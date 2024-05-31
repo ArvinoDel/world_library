@@ -90,15 +90,15 @@
                 <tbody>
                     <?php if (isset($buku) && !empty($buku)): ?>
                         <?php foreach ($buku as $book): ?>
-                            <tr>
-                                <td><?= $book['id']; ?></td>
-                                <td><img src="<?= base_url('image/' . $book['cover']); ?>" alt="<?= $book['judul']; ?>"></td>
-                                <td><?= $book['judul']; ?></td>
-                                <td><?= $book['tahun']; ?></td>
-                                <td><?= $book['kategori']; ?></td>
-                                <td><?= $book['penulis']; ?></td>
-                                <td><?= $book['penerbit']; ?></td>
-                                <td><?= $book['jumlah']; ?></td>
+                            <tr class="data-list">
+                                <td><span class="data id"><?= $book['id']; ?></td>
+                                <td><img src="<?= base_url('image/' . $book['cover']); ?>" alt="<?= $book['judul']; ?>" class="cover"></td>
+                                <td><span class="data judul"><?= $book['judul']; ?></td>
+                                <td><span class="data date"><?= $book['tahun']; ?></td>
+                                <td><span class="data category"><?= $book['kategori_id']; ?></td>
+                                <td><span class="data writer"><?= $book['penulis_id']; ?></td>
+                                <td><span class="data penerbit"><?= $book['penerbit_id']; ?></td>
+                                <td><span class="data jumlah"><?= $book['jumlah']; ?></td>
                                 <td>
                                     <a href="<?= base_url('buku/edit/' . $book['id']); ?>" class="btn btn-edit">Edit</a>
                                     <a href="<?= base_url('buku/delete/' . $book['id']); ?>" class="btn btn-delete" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?');">Delete</a>
