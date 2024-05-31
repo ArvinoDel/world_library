@@ -35,7 +35,7 @@ class Auth extends BaseController
                     ];
                     session()->set($sessionData);
                     session()->set('user', $user);
-                    return redirect()->to('/')->with('success', 'Login successful!'); 
+                    return redirect()->to('/pages')->with('success', 'Login successful!'); 
                 } else {
                     return redirect()->back()->withInput()->with('error', 'Invalid username or password');
                 }
