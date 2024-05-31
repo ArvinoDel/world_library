@@ -31,27 +31,12 @@
                 At our library, we take pride in offering an extensive collection of books that cater to a wide range of interests and preferences. Our shelves are filled with carefully curated selections, ensuring that every reader can find something that captivates their mind and nourishes their soul.
                 </p>
             </div>
+            <?php foreach ($book as $books): ?>
             <div class="book__images">
                 <div class="book__swiper swiper">
                     <div class="swiper-wrapper">
                         <article class="book__article swiper-slide">
-                            <img src="<?= base_url('img/buku6.jpeg'); ?>" alt="image" class="book__img">
-                        </article>
-            
-                        <article class="book__article swiper-slide">
-                            <img src="<?= base_url('img/buku7.jpeg'); ?>" alt="image" class="book__img">
-                        </article>
-            
-                        <article class="book__article swiper-slide">
-                            <img src="<?= base_url('img/buku8.jpeg'); ?>" alt="image" class="book__img">
-                        </article>
-            
-                        <article class="book__article swiper-slide">
-                            <img src="<?= base_url('img/buku10.jpg'); ?>" alt="image" class="book__img">
-                        </article>
-            
-                        <article class="book__article swiper-slide">
-                            <img src="<?= base_url('img/buku11.jpeg'); ?>" alt="image" class="book__img">
+                            <img src="<?= base_url('image/' . $books['cover']) ?>" alt="image" class="book__img">
                         </article>
                     </div>
                 </div>
@@ -71,7 +56,7 @@
             <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="product-item">
                     <div class="position-relative" style="justify-content: center; text-align: center;">
-                        <img class="img-fluid" src="<?= base_url('img/buku12.jpeg'); ?>" alt="">
+                        <img class="img-fluid" src="<?= base_url('image/' . $books['cover']) ?>" alt="">
                         <div class="product-overlay">
                             <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
                                     class="bi bi-bookmarks"></i></a>
@@ -80,85 +65,14 @@
                         </div>
                     </div>
                     <div class="text-center p-4">
-                        <a class="d-block h5" href="">Hide And Seek</a>
+                        <a class="d-block h5" href=""><?= $book['judul'] ?></a>
                         <span class="text-primary me-1">Free</span>
                         <span class="text-decoration-line-through">$29.00</span>
+                        <a class="btn btn-secondary rounded-pill py-2 px-4" style="margin-top: 10px;" href="<?= base_url('pages/detail/' . $book['id']) ?>">Pinjam Buku</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="product-item">
-                    <div class="position-relative" style="justify-content: center; text-align: center;">
-                        <img class="img-fluid" src="<?= base_url('img/buku21.jpeg'); ?>" alt="">
-                        <div class="product-overlay">
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-bookmarks"></i></a>
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5" href="">The Deep Ocean</a>
-                        <span class="text-primary me-1">Free</span>
-                        <span class="text-decoration-line-through">$29.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="product-item">
-                    <div class="position-relative" style="justify-content: center; text-align: center;">
-                        <img class="img-fluid" src="<?= base_url('img/buku13.jpeg'); ?>" alt="">
-                        <div class="product-overlay">
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-bookmarks"></i></a>
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5" href="">Alone</a>
-                        <span class="text-primary me-1">Free</span>
-                        <span class="text-decoration-line-through">$29.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="product-item">
-                    <div class="position-relative" style="justify-content: center; text-align: center;">
-                        <img class="img-fluid" src="<?= base_url('img/buku14.jpeg'); ?>" alt="">
-                        <div class="product-overlay">
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-bookmarks"></i></a>
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5" href="">Strategic Inovation</a>
-                        <span class="text-primary me-1">Free</span>
-                        <span class="text-decoration-line-through">$29.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="product-item" style="height: 95%;">
-                    <div class="position-relative" style="justify-content: center; text-align: center;">
-                        <img class="img-fluid" src="<?= base_url('img/buku15.jpeg'); ?>" alt="">
-                        <div class="product-overlay">
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-bookmarks"></i></a>
-                            <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i
-                                    class="bi bi-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <a class="d-block h5" href="">The Girl In The Woods</a>
-                        <span class="text-primary me-1">Free</span>
-                        <span class="text-decoration-line-through">$29.00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+    <?php endforeach; ?>
 
     <?=$this->endsection(); ?>

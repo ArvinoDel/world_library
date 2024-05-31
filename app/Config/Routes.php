@@ -9,10 +9,11 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/pages', 'Pages::index');
 $routes->get('/pages/contact', 'Pages::contact');
 $routes->get('/pages/about', 'Pages::about');
-$routes->get('/pages/product', 'Pages::product');
+
 $routes->get('/pages/profile', 'Pages::profile');
 $routes->get('/pages/category', 'Pages::category');
-$routes->get('/detail', 'Pages::detail');
+$routes->get('/pages/product', 'BookDetail::index');
+$routes->post('/pages/product', 'BookDetail::detail');
 
 $routes->get('/pages/admin', 'DashboardController::index');
 $routes->get('/pages/user', 'Pages::user');
