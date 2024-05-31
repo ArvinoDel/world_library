@@ -80,7 +80,7 @@ class Pages extends BaseController
             'scrumb' => "User",
             'title_link' => 'user',
             ];
-            return view('pages/user', $data);
+            return view('pages/admin-user', $data);
     }
 
     public function pinjam(){
