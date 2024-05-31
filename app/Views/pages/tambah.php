@@ -90,10 +90,10 @@
                 <tbody>
                     <?php if (isset($buku) && !empty($buku)): ?>
                         <?php foreach ($buku as $book): ?>
-                            <tr class="list">
-                                <td><span class="data id"><?= $book['id']; ?></span></td>
-                                <td><img src="<?= base_url('image/' . $book['cover']); ?>" alt="<?= $book['judul']; ?>"></td>
-                                <td><span class="data title"><?= $book['judul']; ?></td>
+                            <tr class="data-list">
+                                <td><span class="data id"><?= $book['id']; ?></td>
+                                <td><img src="<?= base_url('image/' . $book['cover']); ?>" alt="<?= $book['judul']; ?>" class="cover"></td>
+                                <td><span class="data judul"><?= $book['judul']; ?></td>
                                 <td><span class="data date"><?= $book['tahun']; ?></td>
                                 <td><span class="data category"><?= $book['kategori_id']; ?></td>
                                 <td><span class="data writer"><?= $book['penulis_id']; ?></td>
