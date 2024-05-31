@@ -30,3 +30,5 @@ $routes->post('/login', 'Auth::login');
 $routes->post('/register', 'Auth::register');
 $routes->post('/logout', 'Auth::logout');
 $routes->post('/update', 'Auth::update');
+
+// $routes->post('/');

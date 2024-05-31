@@ -12,11 +12,18 @@ class Tambah extends Controller
 {
     public function index()
     {
+        // Fetch all book data
+        $bookModel = new BookModel();
+        $buku = $bookModel->findAll();
+
+        // Data to pass to the view
         $data1 = [
             'title' => "Add Product | WorldLibrary",
             'scrumb' => "Add Product",
             'title_link' => 'tambah',
+            'buku' => $buku,
         ];
+
         return view('/pages/tambah', $data1);
     }
 

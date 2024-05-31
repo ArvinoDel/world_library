@@ -88,17 +88,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if (isset($buku)): ?>
-                        <?php foreach ($buku as $books): ?>
+                    <?php if (isset($buku) && !empty($buku)): ?>
+                        <?php foreach ($buku as $book): ?>
                             <tr>
-                                <td><?= $books['id']; ?></td>
+                                <td><?= $book['id']; ?></td>
                                 <td><img src="<?= base_url('image/' . $book['cover']); ?>" alt="<?= $book['judul']; ?>"></td>
-                                <td><?= $books['judul']; ?></td>
-                                <td><?= $books['tahun']; ?></td>
-                                <td><?= $books['kategori']; ?></td>
-                                <td><?= $books['penulis']; ?></td>
-                                <td><?= $books['penerbit']; ?></td>
-                                <td><?= $books['jumlah']; ?></td>
+                                <td><?= $book['judul']; ?></td>
+                                <td><?= $book['tahun']; ?></td>
+                                <td><?= $book['kategori']; ?></td>
+                                <td><?= $book['penulis']; ?></td>
+                                <td><?= $book['penerbit']; ?></td>
+                                <td><?= $book['jumlah']; ?></td>
                                 <td>
                                     <a href="<?= base_url('buku/edit/' . $book['id']); ?>" class="btn btn-edit">Edit</a>
                                     <a href="<?= base_url('buku/delete/' . $book['id']); ?>" class="btn btn-delete" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?');">Delete</a>
