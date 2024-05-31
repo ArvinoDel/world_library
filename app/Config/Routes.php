@@ -18,13 +18,14 @@ $routes->get('/pages/admin', 'DashboardController::index');
 $routes->get('/pages/user', 'Pages::user');
 $routes->get('/pages/tambah', 'Tambah::index');
 $routes->get('/login', 'Auth::index');
-
+$routes->get('/pages/edit/(:segment)','Tambah::edit/$id');
 // Route for fetching books data via AJAX
 $routes->get('/admin/fetchBooks', 'DashboardController::fetchBooks');
 
 $routes->post('/pages/profile', 'Pages::profile');
 $routes->post('/pages/tambah', 'Tambah::tambah');
 $routes->post('/pages/pinjam', 'Pages::pinjam');
+$routes->post('/pages/edit','Tambah::edit');
 
 $routes->post('/login', 'Auth::login');
 $routes->post('/register', 'Auth::register');
