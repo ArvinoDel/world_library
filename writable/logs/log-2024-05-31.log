@@ -461,6 +461,7 @@ in APPPATH\Views\pages\tambah.php on line 98.
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\projek\\public\\index.php')
 =======
 10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\world_library\\public\\index.php')
+<<<<<<< HEAD
 >>>>>>> 199a8aec5465e8c9e6aeb0d075fc0be6f1acf7d0
 INFO - 2024-05-31 03:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-31 03:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -499,3 +500,6 @@ in APPPATH\Views\pages\product.php on line 34.
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\projek\\public\\index.php')
+=======
+INFO - 2024-05-31 03:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> b849dfa11cac2efd14526f745b27f2e6e6d438de
